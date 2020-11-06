@@ -11,3 +11,4 @@ permalink: /js
 ---
 
 * [1. 简介](01-getting-started/)  
+* [2. JavaScript 基础知识](02-first-steps/)  
