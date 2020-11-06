@@ -38,5 +38,19 @@ module.exports = {
         ['/1-js/02-first-steps/18-javascript-specials/article', '2.18. JavasScript 特性'],
       ]
     },
+    {
+      title: '第 3 节：代码质量',
+      path: '/1-js/03-code-quality/',
+      collapsable: false,
+      sidebarDepth: 1,
+      children: [
+        ['/1-js/03-code-quality/01-debugging-chrome/article', '3.1. 在 Chrome 中调试'],
+        ['/1-js/03-code-quality/02-coding-style/article', '3.2. 代码风格'],
+        ['/1-js/03-code-quality/03-comments/article', '3.3. 注释'],
+        ['/1-js/03-code-quality/04-ninja-code/article', '3.4. 忍者代码'],
+        ['/1-js/03-code-quality/05-testing-mocha/article', '3.5. 使用 mocha 进行自动化测试'],
+        ['/1-js/03-code-quality/06-polyfills/article', '3.6. Polyfills'],
+      ]
+    },
   ],
 };
