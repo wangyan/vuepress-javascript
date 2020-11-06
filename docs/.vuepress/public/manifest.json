@@ -1,0 +1,44 @@
+{
+  "name": "现代 JavaScript 教程",
+  "short_name": "现代JS教程",
+  "lang": "zh-CN",
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "icons": [
+    {
+      "src": "/javascript-tutorial/icons/icon-ldpi-36x36.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "/javascript-tutorial/icons/icon-mdpi-48x48.png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/javascript-tutorial/icons/icon-hdpi-72x72.png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/javascript-tutorial/icons/icon-xhdpi-96x96.png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/javascript-tutorial/icons/icon-xxhdpi-144x144.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/javascript-tutorial/icons/icon-xxxhdpi-192x192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/javascript-tutorial/icons/icon-72dpi-512x512.png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/javascript-tutorial/icons/icon-144dpi-1024x1024.png",
+      "sizes": "1024x1024"
+    }
+  ]
+}

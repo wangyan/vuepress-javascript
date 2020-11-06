@@ -1,0 +1,20 @@
+{
+  "name": "javascript-tutorial",
+  "version": "1.0.0",
+  "description": "The Modern JavaScript Tutorial",
+  "author": "Ilya Kantor",
+  "license": "CC-BY-NC-4.0",
+  "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.7.1",
+    "@vuepress/plugin-back-to-top": "^1.7.1",
+    "@vuepress/plugin-clean-urls": "^1.0.0-alpha.40",
+    "@vuepress/plugin-medium-zoom": "^1.7.1",
+    "@vuepress/plugin-nprogress": "^1.7.1",
+    "@vuepress/plugin-pwa": "^1.7.1",
+    "vuepress": "^1.7.1"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}
