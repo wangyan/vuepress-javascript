@@ -10,7 +10,7 @@ module.exports = {
   head: headConf,
   host: '127.0.0.1',
   port: 6060,
-  dest: '.vuepress/dist',
+  dest: 'docs/.vuepress/dist',
   locales: {
     '/': {
       lang: 'zh-CN',
