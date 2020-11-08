@@ -63,7 +63,7 @@ describe("pow", function() {
 `assert.equal(value1, value2)`
 : `it` 块中的代码，如果实现是正确的，它应该在执行的时候不产生任何错误。
 
-    `assert.*` 函数用于检查 `pow` 函数是否按照预期工作。在这里我们使用了其中之一 —— `assert.equal`，它会对参数进行比较，如果它们不相等则会抛出一个错误。这里它检查了 `pow(2, 3)` 的值是否等于 `8`。还有其他类型的比较和检查，我们将在后面介绍到。
+`assert.*` 函数用于检查 `pow` 函数是否按照预期工作。在这里我们使用了其中之一 —— `assert.equal`，它会对参数进行比较，如果它们不相等则会抛出一个错误。这里它检查了 `pow(2, 3)` 的值是否等于 `8`。还有其他类型的比较和检查，我们将在后面介绍到。
 
 规范可以被执行，它将运行在 `it` 块中指定的测试。我们稍后会看到。
 
@@ -97,7 +97,47 @@ describe("pow", function() {
 
 包含这些框架和 `pow` 规范的完整的 HTML 页面：
 
-[index.html](/html/testing-mocha/index.html)
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- add mocha css, to show results -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <!-- add mocha framework code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>
+    mocha.setup('bdd'); // minimal setup
+  </script>
+  <!-- add chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai has a lot of stuff, let's make assert global
+    let assert = chai.assert;
+  </script>
+</head>
+
+<body>
+
+  <script>
+    function pow(x, n) {
+      /* function code is to be written, empty now */
+    }
+  </script>
+
+  <!-- the script with tests (describe, it...) -->
+  <script src="test.js"></script>
+
+  <!-- the element with id="mocha" will contain test results -->
+  <div id="mocha"></div>
+
+  <!-- run tests! -->
+  <script>
+    mocha.run();
+  </script>
+</body>
+
+</html>
+```
 
 该页面可分为五个部分：
 
@@ -108,6 +148,8 @@ describe("pow", function() {
 5. 可以使用 `mocha.run()` 命令来开始测试。
 
 结果：
+
+[pow-1.view](/html/testing-mocha/pow-1.view/index.html)
 
 到目前为止，测试失败了，出现了一个错误。这是合乎逻辑的：我们的 `pow` 是一个空函数，因此 `pow(2,3)` 返回了 `undefined` 而不是 `8`。
 
@@ -125,6 +167,8 @@ function pow() {
 
 哇哦，现在它可以工作了。
 
+[pow-min.view](/html/testing-mocha/pow-min.view/index.html)
+
 ## 改进规范
 
 我们所做的这些绝对是作弊。函数是不起作用的：尝试计算 `pow(3,4)` 的话就会得到一个不正确的结果，但是测试却通过了。
@@ -137,14 +181,12 @@ function pow() {
 
 1. 第一种 —— 在同一个 `it` 中再添加一个 `assert`：
 
-    ```js
+    ```js {5}
     describe("pow", function() {
 
       it("raises to n-th power", function() {
         assert.equal(pow(2, 3), 8);
-    *!*
         assert.equal(pow(3, 4), 81);
-    */!*
       });
 
     });
@@ -178,6 +220,8 @@ function pow() {
 因此让我们继续使用第二种方式。
 
 结果：
+
+[pow-2.view](/html/testing-mocha/pow-2.view/index.html)
 
 正如我们可以想到的，第二条测试失败了。当然啦，我们的函数总会返回 `8`，而 `assert` 期望的是 `81`。
 
@@ -218,6 +262,8 @@ describe("pow", function() {
 
 结果：
 
+[pow-3.view](/html/testing-mocha/pow-3.view/index.html)
+
 ## 嵌套描述
 
 我们继续添加更多的测试。但在此之前，我们需要注意到辅助函数 `makeTest` 和 `for` 应该被组合到一起。我们在其他测试中不需要 `makeTest`，只有在 `for` 循环中需要它：它们共同的任务就是检查 `pow` 是如何自乘至给定的幂次方。
@@ -248,9 +294,11 @@ describe("pow", function() {
 
 嵌套的 `describe` 定义了一个新的 "subgroup" 测试。在输出中我们可以看到带有标题的缩进：
 
+[pow-full.view](/html/testing-mocha/pow-full.view/index.html)
+
 将来，我们可以在顶级域中使用 `it` 和 `describe` 的辅助函数添加更多的 `it` 和 `describe`，它们不会看到 `makeTest`。
 
-::: tip `before/after` 和 `beforeEach/afterEach`
+::: tip before/after 和 beforeEach/afterEach
 
 我们可以设置 `before/after` 函数来在运行测试之前/之后执行。也可以使用 `beforeEach/afterEach` 函数来设置在执行 **每一个** `it` 之前/之后执行。
 
@@ -283,6 +331,7 @@ Before a test – enter a test (beforeEach)
 After a test – exit a test   (afterEach)
 Testing finished – after all tests (after)
 ```
+[Open the example in the sandbox.](https://plnkr.co/edit/GbnfZaiQjI09SIgj?p=preview) 
 
 通常，`beforeEach/afterEach` 和 `before/after` 被用于执行初始化，清零计数器或做一些介于每个测试（或测试组）之间的事情。
 
@@ -298,27 +347,25 @@ JavaScript 函数通常会返回 `NaN` 以表示一个数学错误。接下来�
 
 让我们首先将这个行为加到规范中(!)：
 
-```js
+```js {6,10}
 describe("pow", function() {
 
   // ...
 
   it("for negative n the result is NaN", function() {
-*!*
     assert.isNaN(pow(2, -1));
-*/!*
   });
 
   it("for non-integer n the result is NaN", function() {
-*!*
     assert.isNaN(pow(2, 1.5));    
-*/!*
   });
 
 });
 ```
 
 新测试的结果：
+
+[pow-nan.view](/html/testing-mocha/pow-nan.view/index.html)
 
 新加的测试失败了，因为我们的实现方式是不支持它们的。这就是 BDD 的做法：我们首先写一些暂时无法通过的测试，然后去实现它们。
 
@@ -339,12 +386,10 @@ describe("pow", function() {
 
 因此我们应该给 `pow` 再加几行：
 
-```js
+```js {2-3}
 function pow(x, n) {
-*!*
   if (n < 0) return NaN;
   if (Math.round(n) != n) return NaN;
-*/!*
 
   let result = 1;
 
@@ -448,22 +493,19 @@ describe("Raises x to power n", function() {
 此外，我们可以通过编写 `it.only` 而不是 `it` 来隔离单个测试，并以独立模式运行它：
 
 
-```js
+```js {6-9}
 describe("Raises x to power n", function() {
   it("5 in the power of 1 equals 5", function() {
     assert.equal(pow(5, 1), 5);
   });
 
-*!*
   // Mocha 将只运行这个代码块
   it.only("5 in the power of 2 equals 25", function() {
     assert.equal(pow(5, 2), 25);
   });
-*/!*
 
   it("5 in the power of 3 equals 125", function() {
     assert.equal(pow(5, 3), 125);
   });
 });
 ```
-

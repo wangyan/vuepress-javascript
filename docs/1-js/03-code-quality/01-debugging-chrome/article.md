@@ -126,11 +126,11 @@ function hello(name) {
 <span class="devtools" style="background-position:-146px -168px"></span> —— “恢复（Resume）”：继续执行，快捷键 `key:F8`。
 : 继续执行。如果没有其他的断点，那么程序就会继续执行，并且调试器不会再控制程序。
 
-    我们点击它一下之后，我们会看到这样的情况：
+我们点击它一下之后，我们会看到这样的情况：
 
-    ![](./chrome-sources-debugger-trace-1.svg)
+![](./chrome-sources-debugger-trace-1.svg)
 
-    执行恢复了，执行到 `say()` 函数中的另外一个断点后暂停在了那里。看一下右边的 "Call stack"。它已经增加了一个调用信息。我们现在在 `say()` 里面。
+执行恢复了，执行到 `say()` 函数中的另外一个断点后暂停在了那里。看一下右边的 "Call stack"。它已经增加了一个调用信息。我们现在在 `say()` 里面。
 
 <span class="devtools" style="background-position:-200px -190px"></span> —— “下一步（Step）”：运行下一条指令，快捷键 `key:F9`。
 : 运行下一条语句。如果我们现在点击它，`alert` 会被显示出来。

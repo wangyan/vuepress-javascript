@@ -48,11 +48,11 @@ function showPrimes(n) {
 更好的变体，使用一个分解出来的函数 `isPrime`：
 
 
-```js
+```js {4}
 function showPrimes(n) {
 
   for (let i = 2; i < n; i++) {
-    *!*if (!isPrime(i)) continue;*/!*
+    if (!isPrime(i)) continue;
 
     alert(i);  
   }
