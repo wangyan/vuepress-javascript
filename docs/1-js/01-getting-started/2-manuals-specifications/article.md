@@ -16,7 +16,7 @@ permalink: /manuals-specifications
 
 想了解最新最前沿的功能，包括“即将纳入规范的”（所谓的 "stage 3"），请看这里的提案 <https://github.com/tc39/proposals>。
 
-当然，如果你正在做浏览器相关的开发工作，那么本教程的 [第二部分](info:browser-environment) 涵盖了其他规范。
+当然，如果你正在做浏览器相关的开发工作，那么本教程的 [第二部分](/browser-environment) 涵盖了其他规范。
 
 ## 手册
 

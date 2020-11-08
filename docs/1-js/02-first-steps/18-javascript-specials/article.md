@@ -45,7 +45,7 @@ for(;;) {
 
 ……但即使我们在某处添加了「额外的」分号，这也不是错误。分号会被忽略的。
 
-更多内容：[structure](/structure)。
+更多内容：[代码结构](/structure)。
 
 ## 严格模式
 
@@ -53,7 +53,6 @@ for(;;) {
 
 ```js
 'use strict';
-
 ...
 ```
 
@@ -63,7 +62,7 @@ for(;;) {
 
 语言的一些现代特征（比如我们将来要学习的类）会隐式地启用严格模式。
 
-更多内容：[strict-mode](/strict-mode)。
+更多内容：[严格模式](/strict-mode)。
 
 ## 变量
 
@@ -101,7 +100,7 @@ typeof null == "object" // JavaScript 编程语言的设计错误
 typeof function(){} == "function" // 函数被特殊对待
 ```
 
-更多内容：<info:variables> 和 <info:types>。
+更多内容：[变量](/variables) 和 [数据类型](/types)。
 
 ## 交互
 
@@ -111,7 +110,7 @@ typeof function(){} == "function" // 函数被特殊对待
 : 提出一个问题，并返回访问者输入的内容，如果他按下「取消」则返回 `null`。
 
 [`confirm(question)`](mdn:api/Window/confirm)
-: 提出一个问题，并建议用户在“确定”和“取消”之间进行选择。选择结果以 `true/false` 形式返回。
+: 提出一个问题，并建议用户在“确定”和“取消”之间进行选择。选择结果以 `true/false` 形式返回
 
 [`alert(message)`](mdn:api/Window/alert)
 : 输出一个 `消息`。
@@ -128,57 +127,62 @@ alert( "Visitor: " + userName ); // Alice
 alert( "Tea wanted: " + isTeaWanted ); // true
 ```
 
-更多内容：[alert-prompt-confirm](/alert-prompt-confirm)。
+更多内容：[交互：alert、prompt 和 confirm](/alert-prompt-confirm)。
 
 ## 运算符
 
 JavaScript 支持以下运算符：
 
-算数运算符
+- **算数运算符**
 : 常规的：`+ - * /`（加减乘除），取余运算符 `%` 和幂运算符 `**`。
 
-    二进制加号 `+` 可以连接字符串。如果任何一个操作数是一个字符串，那么另一个操作数也将被转换为字符串：
+  ::: tip 二进制加号 `+` 可以连接字符串
 
-    ```js
-    alert( '1' + 2 ); // '12'，字符串
-    alert( 1 + '2' ); // '12'，字符串
-    ```
+  如果任何一个操作数是一个字符串，那么另一个操作数也将被转换为字符串：
 
-赋值
+  ```js
+  alert( '1' + 2 ); // '12'，字符串
+  alert( 1 + '2' ); // '12'，字符串
+  ```
+  :::
+
+- **赋值**
 : 简单的赋值：`a = b` 和合并了其他操作的赋值：`a * = 2`。
 
-按位运算符
+- **按位运算符**
 : 按位运算符在最低位级上操作 32 位的整数：详见 [文档](mdn:/JavaScript/Reference/Operators/Bitwise_Operators)。
 
-三元运算符
+- **三元运算符**
 : 唯一具有三个参数的操作：`cond ? resultA : resultB`。如果 `cond` 是真的，则返回 `resultA`，否则返回 `resultB`。
 
-逻辑运算符
+- **逻辑运算符**
 : 逻辑与 `&&` 和或 `||` 执行短路运算，然后返回运算停止处的值（`true`/`false` 不是必须的）。逻辑非 `!` 将操作数转换为布尔值并返回其相反的值。
 
-空值合并运算符
+- **空值合并运算符**
 : `??` 运算符从一列变量中，选取值为已定义的值（defined value）的变量。`a ?? b` 的结果是 `a`，除非 `a` 为 `null/undefined`，这时结果是 `b`。
 
-比较运算符
+- **比较运算符**
 : 对不同类型的值进行相等检查时，运算符 `==` 会将不同类型的值转换为数字（除了 `null` 和 `undefined`，它们彼此相等而没有其他情况），所以下面的例子是相等的：
 
-    ```js
-    alert( 0 == false ); // true
-    alert( 0 == '' ); // true
-    ```
+  ```js
+  alert( 0 == false ); // true
+  alert( 0 == '' ); // true
+  ```
 
-    其他比较也将转换为数字。
+  ::: tip 其他比较也将转换为数字。
 
-    严格相等运算符 `===` 不会进行转换：不同的类型总是指不同的值。
+  严格相等运算符 `===` 不会进行转换：不同的类型总是指不同的值。
 
-    值 `null` 和 `undefined` 是特殊的：它们只在 `==` 下相等，且不相等于其他任何值。
+  值 `null` 和 `undefined` 是特殊的：它们只在 `==` 下相等，且不相等于其他任何值。
 
-    大于/小于比较，在比较字符串时，会按照字符顺序逐个字符地进行比较。其他类型则被转换为数字。
+  大于/小于比较，在比较字符串时，会按照字符顺序逐个字符地进行比较。其他类型则被转换为数字。
 
-其他运算符
+  :::
+
+- **其他运算符**
 : 还有很少一部分其他运算符，如逗号运算符。
 
-更多内容：[operators](/operators),[comparison](/comparison),[logical-operators](/logical-operators),[nullish-coalescing-operator](/nullish-coalescing-operator)。
+更多内容：[基础运算符](/operators)，[值的比较](/comparison)，[l逻辑运算符](/logical-operators)，[空值合并运算符](/nullish-coalescing-operator)。
 
 ## 循环
 
@@ -204,7 +208,7 @@ JavaScript 支持以下运算符：
 - 在 `for(let...)` 循环内部声明的变量，只在该循环内可见。但我们也可以省略 `let` 并重用已有的变量。
 - 指令 `break/continue` 允许退出整个循环/当前迭代。使用标签来打破嵌套循环。
 
-更多内容：[while-for](/while-for)。
+更多内容：[循环：while 和 for](/while-for)。
 
 稍后我们将学习更多类型的循环来处理对象。
 
@@ -231,7 +235,7 @@ switch (age) {
 }
 ```
 
-详情请见：[switch](/switch)。
+详情请见：[switch 语句](/switch)。
 
 ## 函数
 
@@ -281,7 +285,7 @@ switch (age) {
 - 参数可以有默认值：`function sum(a = 1, b = 2) {...}`。
 - 函数总是返回一些东西。如果没有 `return` 语句，那么返回的结果是 `undefined`。
 
-详细内容：请见 [function-basics](/function-basics) [arrow-functions-basics](/arrow-functions-basics)。
+详细内容：请见 [函数](/function-basics) 、[箭头函数基础](/arrow-functions-basics)。
 
 ## 更多内容
 
