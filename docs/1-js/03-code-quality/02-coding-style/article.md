@@ -62,22 +62,22 @@ if (condition) {
 下面是这几种情况的注释，你可以自己判断一下它们的可读性：
 
 1. 😠 初学者常这样写。非常不好！这里不需要花括号：
-    ```js
-    if (n < 0) *!*{*/!*alert(`Power ${n} is not supported`);*!*}*/!*
+    ```js {1}
+    if (n < 0) {alert(Power ${n} is not supported);}
     ```
 2. 😠 拆分为单独的行，不带花括号。永远不要这样做，添加新行很容易出错：
     ```js
     if (n < 0)
-      alert(`Power ${n} is not supported`);
+      alert(Power ${n} is not supported);
     ```
 3. 😏 写成一行，不带花括号 — 如果短的话，也是可以的：
     ```js
-    if (n < 0) alert(`Power ${n} is not supported`);
+    if (n < 0) alert(Power ${n} is not supported);
     ```
 4. 😃 最好的方式：
     ```js
     if (n < 0) {
-      alert(`Power ${n} is not supported`);
+      alert(Power ${n} is not supported);
     }
     ```
 
@@ -90,11 +90,11 @@ if (condition) {
 例如：
 ```js
 // 回勾引号 ` 允许将字符串拆分为多行
-let str = `
+let str = 
   ECMA International's TC39 is a group of JavaScript developers,
   implementers, academics, and more, collaborating with the community
   to maintain and evolve the definition of JavaScript.
-`;
+;
 ```
 
 对于 `if` 语句：
@@ -156,7 +156,7 @@ if (
 
 每一个语句后面都应该有一个分号。即使它可以被跳过。
 
-有一些编程语言的分号确实是可选的，那些语言中也很少使用分号。但是在 JavaScript 中，极少数情况下，换行符有时不会被解释为分号，这时代码就容易出错。更多内容请参阅 <info:structure#semicolon> 一章的内容。
+有一些编程语言的分号确实是可选的，那些语言中也很少使用分号。但是在 JavaScript 中，极少数情况下，换行符有时不会被解释为分号，这时代码就容易出错。更多内容请参阅 [代码结构](/structure#semicolon) 一章的内容。
 
 如果你是一个有经验的 JavaScript 程序员，你可以选择像 [StandardJS](https://standardjs.com/) 这样的无分号的代码风格。否则，最好使用分号以避免可能出现的陷阱。大多数开发人员都应该使用分号。
 
@@ -164,7 +164,7 @@ if (
 
 尽量避免代码嵌套层级过深。
 
-例如，在循环中，有时候使用 [`continue`](info:while-for#continue) 指令以避免额外的嵌套是一个好主意。
+例如，在循环中，有时候使用 [`continue`](/while-for#continue) 指令以避免额外的嵌套是一个好主意。
 
 例如，不应该像下面这样添加嵌套的 `if` 条件：
 
@@ -178,9 +178,9 @@ for (let i = 0; i < 10; i++) {
 
 我们可以这样写：
 
-```js
+```js {2}
 for (let i = 0; i < 10; i++) {
-  if (!cond) *!*continue*/!*;
+  if (!cond) continue;
   ...  // <- 没有额外的嵌套
 }
 ```
@@ -234,8 +234,8 @@ function pow(x, n) {
 
 1. 在调用这些函数的代码的 **上方** 声明这些函数：
 
-    ```js
-    // *!*函数声明*/!*
+    ```js {1,14}
+    // 函数声明
     function createElement() {
       ...
     }
@@ -248,20 +248,20 @@ function pow(x, n) {
       ...
     }
 
-    // *!*调用函数的代码*/!*
+    // 调用函数的代码
     let elem = createElement();
     setHandler(elem);
     walkAround();
     ```
 2. 先写调用代码，再写函数
 
-    ```js
-    // *!*调用函数的代码*/!*
+    ```js {1,6}
+    // 调用函数的代码
     let elem = createElement();
     setHandler(elem);
     walkAround();
 
-    // --- *!*辅助函数*/!* ---
+    // --- 辅助函数 ---
     function createElement() {
       ...
     }
@@ -353,6 +353,8 @@ function pow(x, n) {
 阅读流行的代码风格指南，可以帮助你了解有关代码风格的变化趋势和最佳实践的最新想法。
 
 ## 任务
+
+<https://zh.javascript.info/coding-style#tasks>
 
 ### 不好的风格
 

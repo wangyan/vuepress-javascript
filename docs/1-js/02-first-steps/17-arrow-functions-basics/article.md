@@ -28,7 +28,6 @@ let func = function(arg1, arg2, ...argN) {
 let sum = (a, b) => a + b;
 
 /* 这个箭头函数是下面这个函数的更短的版本：
-
 let sum = function(a, b) {
   return a + b;
 };
@@ -99,7 +98,7 @@ alert( sum(1, 2) ); // 3
 
 箭头函数还有其他有趣的特性。
 
-为了更深入地学习它们，我们首先需要了解一些 JavaScript 其他方面的知识，因此我们将在后面的 <info:arrow-functions> 一章中再继续研究箭头函数。
+为了更深入地学习它们，我们首先需要了解一些 JavaScript 其他方面的知识，因此我们将在后面的 [箭头函数](/arrow-functions) 一章中再继续研究箭头函数。
 
 现在，我们已经可以用箭头函数进行单行行为和回调了。
 
@@ -113,6 +112,8 @@ alert( sum(1, 2) ); // 3
 2. 带花括号：`(...args) => { body }` — 花括号允许我们在函数中编写多个语句，但是我们需要显式地 `return` 来返回一些内容。
 
 ## 任务
+
+<https://zh.javascript.info/arrow-functions-basics#tasks>
 
 ### 用箭头函数重写
 

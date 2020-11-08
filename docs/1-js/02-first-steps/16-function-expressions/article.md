@@ -240,22 +240,18 @@ let sayHi = function(name) {  // (*) no magic any more
 
 如果我们使用函数声明，以下则代码不能如愿工作：
 
-```js {19}
+```js {15}
 let age = prompt("What is your age?", 18);
 
 // 有条件地声明一个函数
 if (age < 18) {
-
   function welcome() {
     alert("Hello!");
   }
-
 } else {
-
   function welcome() {
     alert("Greetings!");
   }
-
 }
 
 // ……稍后使用
@@ -266,18 +262,15 @@ welcome(); // Error: welcome is not defined
 
 下面是另一个例子：
 
-```js {4,10,22}
+```js {4,8,16}
 let age = 16; // 拿 16 作为例子
 
 if (age < 18) {
   welcome();               // \   (运行)
-                           //  |
   function welcome() {     //  |  
     alert("Hello!");       //  |  函数声明在声明它的代码块内任意位置都可用
   }                        //  |  
-                           //  |
   welcome();               // /   (运行)
-
 } else {
   function welcome() {
     alert("Greetings!");
@@ -294,23 +287,19 @@ welcome(); // Error: welcome is not defined
 
 下面的代码可以如愿运行：
 
-```js {19}
+```js {3,15}
 let age = prompt("What is your age?", 18);
 
 let welcome;
 
 if (age < 18) {
-
   welcome = function() {
     alert("Hello!");
   };
-
 } else {
-
   welcome = function() {
     alert("Greetings!");
   };
-
 }
 
 welcome(); // 现在可以了

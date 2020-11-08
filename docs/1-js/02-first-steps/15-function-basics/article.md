@@ -57,10 +57,9 @@ showMessage();
 
 例如：
 
-```js {2-3}
+```js {3}
 function showMessage() {
   let message = "Hello, I'm JavaScript!"; // 局部变量
-
   alert( message );
 }
 
@@ -93,7 +92,6 @@ let userName = 'John';
 
 function showMessage() {
   userName = "Bob"; // (1) 改变外部变量
-
   let message = 'Hello, ' + userName;
   alert(message);
 }
@@ -113,10 +111,7 @@ alert( userName ); // Bob，值被函数修改了
 let userName = 'John';
 
 function showMessage() {
-
   let userName = "Bob"; // 声明一个局部变量
-
-
   let message = 'Hello, ' + userName; // Bob
   alert(message);
 }
@@ -148,10 +143,8 @@ function showMessage(from, text) { // 参数：from 和 text
   alert(from + ': ' + text);
 }
 
-
 showMessage('Ann', 'Hello!'); // Ann: Hello! (*)
 showMessage('Ann', "What's up?"); // Ann: What's up? (**)
-
 ```
 
 当函数在 `(*)` 和 `(**)` 行中被调用时，给定值被复制到了局部变量 `from` 和 `text`。然后函数使用它们进行计算。
@@ -161,11 +154,7 @@ showMessage('Ann', "What's up?"); // Ann: What's up? (**)
 
 ```js
 function showMessage(from, text) {
-
-
   from = '*' + from + '*'; // 让 "from" 看起来更优雅
-
-
   alert( from + ': ' + text );
 }
 
@@ -231,7 +220,6 @@ function showMessage(text) {
     text = 'empty message';
   }
 
-
   alert(text);
 }
 
@@ -248,7 +236,7 @@ function showMessage(text) {
 }
 ```
 
-现代 JavaScript 引擎支持 [空值合并运算符](info:nullish-coalescing-operator) `??`，当可能遇到其他假值时它更有优势，如 `0` 会被视为正常值不被合并：
+现代 JavaScript 引擎支持 [空值合并运算符](/nullish-coalescing-operator) `??`，当可能遇到其他假值时它更有优势，如 `0` 会被视为正常值不被合并：
 
 ```js
 // 如果没有传入 "count" 参数，则显示 "unknown"
@@ -283,13 +271,9 @@ alert( result ); // 3
 ```js
 function checkAge(age) {
   if (age >= 18) {
-
     return true;
-
   } else {
-
     return confirm('Got a permission from the parents?');
-
   }
 }
 
@@ -309,9 +293,7 @@ if ( checkAge(age) ) {
 ```js
 function showMovie(age) {
   if ( !checkAge(age) ) {
-
     return;
-
   }
 
   alert( "Showing you the movie" ); // (*)
@@ -455,7 +437,6 @@ function showPrimes(n) {
 
 ```js
 function showPrimes(n) {
-
   for (let i = 2; i < n; i++) {
     if (!isPrime(i)) continue;
 
@@ -503,6 +484,8 @@ function name(parameters, delimited, by, comma) {
 
 ## 任务
 
+<https://zh.javascript.info/function-basics#tasks>
+
 ### 是否需要 “else”？
 
 如果参数 `age` 大于 `18`，那么下面的函数将返回 `true`。
@@ -513,12 +496,10 @@ function name(parameters, delimited, by, comma) {
 function checkAge(age) {
   if (age > 18) {
     return true;
-
   } else {
     // ...
     return confirm('Did parents allow you?');
   }
-
 }
 ```
 

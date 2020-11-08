@@ -68,7 +68,7 @@ n = 12.345;
 
 特殊的数值属于 "number" 类型。当然，对“特殊的数值”这个词的一般认识是，它们并不是数字。
 
-我们将在 [number](/number) 一节中学习数字的更多细节。
+我们将在 [数字类型](/number) 一节中学习数字的更多细节。
 
 ## BigInt 类型
 
@@ -133,7 +133,7 @@ alert( `the result is ${1 + 2}` ); // the result is 3
 alert( "the result is ${1 + 2}" );
 ```
 
-我们会在 [string](/string) 一节中学习字符串的更多细节。
+我们会在 [字符串](/string) 一节中学习字符串的更多细节。
 
 ::: tip JavaScript 中没有 character 类型。
 在一些语言中，单个字符有一个特殊的 "character" 类型，在 C 语言和 Java 语言中被称为 "char"。
@@ -162,7 +162,7 @@ let isGreater = 4 > 1;
 alert( isGreater ); // true（比较的结果是 "yes"）
 ```
 
-更详细的内容将会在 [logical-operators](/logical-operators) 一节中介绍。
+更详细的内容将会在 [逻辑运算符](/logical-operators) 一节中介绍。
 
 ## "null" 值
 
@@ -213,7 +213,7 @@ alert(age); // "undefined"
 
 其他所有的数据类型都被称为“原始类型”，因为它们的值只包含一个单独的内容（字符串、数字或者其他）。相反，`object` 则用于储存数据集合和更复杂的实体。
 
-因为它非常重要，所以我们对其进行单独讲解。在充分学习了原始类型后，我们将会在 [object](/object) 一章中介绍 `object`。
+因为它非常重要，所以我们对其进行单独讲解。在充分学习了原始类型后，我们将会在 [对象](/object) 一章中介绍 `object`。
 
 `symbol` 类型用于创建对象的唯一标识符。我们在这里提到 `symbol` 类型是为了完整性，但我们要在学完 `object` 类型后再学习它。
 
@@ -245,7 +245,7 @@ typeof alert // "function"  (3)
 
 最后三行可能需要额外的说明：
 
-1. `Math` 是一个提供数学运算的内建 `object`。我们会在 [number](/number) 一节中学习它。此处仅作为一个 `object` 的示例。
+1. `Math` 是一个提供数学运算的内建 `object`。我们会在 [数字类型](/number) 一节中学习它。此处仅作为一个 `object` 的示例。
 2. `typeof null` 的结果是 `"object"`。这是官方承认的 `typeof` 的行为上的错误，这个问题来自于 JavaScript 语言的早期，并为了兼容性而保留了下来。`null` 绝对不是一个 `object`。`null` 有自己的类型，它是一个特殊值。
 3. `typeof alert` 的结果是 `"function"`，因为 `alert` 在 JavaScript 语言中是一个函数。我们会在下一章学习函数，那时我们会了解到，在 JavaScript 语言中没有一个特别的 "function" 类型。函数隶属于 `object` 类型。但是 `typeof` 会对函数区分对待，并返回 `"function"`。这也是来自于 JavaScript 语言早期的问题。从技术上讲，这种行为是不正确的，但在实际编程中却非常方便。
 
