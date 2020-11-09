@@ -135,8 +135,17 @@ describe("pow", function() {
     mocha.run();
   </script>
 </body>
-
 </html>
+```
+
+test.js
+
+```js
+describe("pow", function() {
+  it("raises to n-th power", function() {
+    assert.equal(pow(2, 3), 8);
+  });
+});
 ```
 
 该页面可分为五个部分：
@@ -149,7 +158,9 @@ describe("pow", function() {
 
 结果：
 
-[pow-1.view](/html/testing-mocha/pow-1.view/index.html)
+[本地预览](/html/testing-mocha/pow-1.view/index.html) | [在沙箱中打开](https://plnkr.co/edit/Tjz77Vofdt7IRJGn?p=preview)
+
+![pow-1.view](./pow-1.jpg)
 
 到目前为止，测试失败了，出现了一个错误。这是合乎逻辑的：我们的 `pow` 是一个空函数，因此 `pow(2,3)` 返回了 `undefined` 而不是 `8`。
 
@@ -167,7 +178,9 @@ function pow() {
 
 哇哦，现在它可以工作了。
 
-[pow-min.view](/html/testing-mocha/pow-min.view/index.html)
+[本地预览](/html/testing-mocha/pow-min.view/index.html) | [在沙箱中打开](https://plnkr.co/edit/YpgrDhYIAs7lWmtY?p=preview)
+
+![pow-min.view](./pow-min.jpg)
 
 ## 改进规范
 
@@ -221,7 +234,9 @@ function pow() {
 
 结果：
 
-[pow-2.view](/html/testing-mocha/pow-2.view/index.html)
+[本地预览](/html/testing-mocha/pow-2.view/index.html) | [在沙箱中打开](https://plnkr.co/edit/voVRGjcRg7RkQTZr?p=preview)
+
+![pow-2.view](./pow-2.jpg)
 
 正如我们可以想到的，第二条测试失败了。当然啦，我们的函数总会返回 `8`，而 `assert` 期望的是 `81`。
 
@@ -262,7 +277,9 @@ describe("pow", function() {
 
 结果：
 
-[pow-3.view](/html/testing-mocha/pow-3.view/index.html)
+[本地预览](/html/testing-mocha/pow-3.view/index.html) | [在沙箱中打开](https://plnkr.co/edit/fGVMptYjGzFspOGH?p=preview)
+
+![pow-3.view](./pow-3.jpg)
 
 ## 嵌套描述
 
@@ -294,7 +311,9 @@ describe("pow", function() {
 
 嵌套的 `describe` 定义了一个新的 "subgroup" 测试。在输出中我们可以看到带有标题的缩进：
 
-[pow-full.view](/html/testing-mocha/pow-full.view/index.html)
+[本地预览](/html/testing-mocha/pow-4.view/index.html) |  [在沙箱中打开](https://plnkr.co/edit/mbuprHopPBcA5W9S?p=preview)
+
+![pow-4.view](./pow-4.jpg)
 
 将来，我们可以在顶级域中使用 `it` 和 `describe` 的辅助函数添加更多的 `it` 和 `describe`，它们不会看到 `makeTest`。
 
@@ -331,7 +350,8 @@ Before a test – enter a test (beforeEach)
 After a test – exit a test   (afterEach)
 Testing finished – after all tests (after)
 ```
-[Open the example in the sandbox.](https://plnkr.co/edit/GbnfZaiQjI09SIgj?p=preview) 
+
+[本地预览](/html/testing-mocha/beforeafter.view/index.html) |  [在沙箱中打开](https://plnkr.co/edit/GbnfZaiQjI09SIgj?p=preview)
 
 通常，`beforeEach/afterEach` 和 `before/after` 被用于执行初始化，清零计数器或做一些介于每个测试（或测试组）之间的事情。
 
@@ -365,7 +385,9 @@ describe("pow", function() {
 
 新测试的结果：
 
-[pow-nan.view](/html/testing-mocha/pow-nan.view/index.html)
+[本地预览](/html/testing-mocha/pow-nan.view/index.html) |  [在沙箱中打开](https://plnkr.co/edit/L5lDeZiVOXDpek3U?p=preview&preview)
+
+![pow-nan.view](./pow-nan.jpg)
 
 新加的测试失败了，因为我们的实现方式是不支持它们的。这就是 BDD 的做法：我们首先写一些暂时无法通过的测试，然后去实现它们。
 
@@ -402,6 +424,10 @@ function pow(x, n) {
 ```
 
 现在它可以工作了，所有的测试也都通过了：
+
+[本地预览](/html/testing-mocha/pow-full.view/index.html) | [在沙箱中打开](https://plnkr.co/edit/d9iXyHLaB8ZB5b2x?p=preview)
+
+![pow-full.view](./pow-full.jpg)
 
 ## 总结
 

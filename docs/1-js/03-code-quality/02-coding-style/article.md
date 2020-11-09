@@ -63,21 +63,21 @@ if (condition) {
 
 1. 😠 初学者常这样写。非常不好！这里不需要花括号：
     ```js {1}
-    if (n < 0) {alert(`Power ${n} is not supported`);}
+    if (n < 0) {alert(Power ${n} is not supported);}
     ```
 2. 😠 拆分为单独的行，不带花括号。永远不要这样做，添加新行很容易出错：
     ```js
     if (n < 0)
-      alert(`Power ${n} is not supported`);
+      alert(Power ${n} is not supported);
     ```
 3. 😏 写成一行，不带花括号 — 如果短的话，也是可以的：
     ```js
-    if (n < 0) alert(`Power ${n} is not supported`);
+    if (n < 0) alert(Power ${n} is not supported);
     ```
 4. 😃 最好的方式：
     ```js
     if (n < 0) {
-      alert(`Power ${n} is not supported`);
+      alert(Power ${n} is not supported);
     }
     ```
 
@@ -90,11 +90,11 @@ if (condition) {
 例如：
 ```js
 // 回勾引号 ` 允许将字符串拆分为多行
-let str = `
+let str = 
   ECMA International's TC39 is a group of JavaScript developers,
   implementers, academics, and more, collaborating with the community
   to maintain and evolve the definition of JavaScript.
-`;
+;
 ```
 
 对于 `if` 语句：
