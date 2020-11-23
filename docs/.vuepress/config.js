@@ -16,6 +16,7 @@ module.exports = {
       lang: 'zh-CN',
     }
   },
+  theme: 'vuepress-theme-succinct',
   themeConfig: {
     repo: 'wangyan/javascript-tutorial',
     repoLabel: '查看源码',
@@ -33,4 +34,7 @@ module.exports = {
   markdown: {
     //lineNumbers: true
   },
+  globalUIComponents: [
+    'ThemeManager'
+  ]
 }
