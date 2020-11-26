@@ -25,5 +25,4 @@ module.exports = [
     ['link', { rel: 'apple-touch-icon', sizes: '512x512', href: '/icons/icon-72dpi-512x512.png' }],
     ['link', { rel: 'icon', sizes: '1024x1024', href: '/icons/icon-144dpi-1024x1024.png' }],
     ['link', { rel: 'apple-touch-icon', sizes: '1024x1024', href: '/icons/icon-144dpi-1024x1024.png' }],
-    ['link', { rel: 'stylesheet', href: 'https://at.alicdn.com/t/font_1030519_2ciwdtb4x65.css' }],
 ];
