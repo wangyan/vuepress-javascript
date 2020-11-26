@@ -17,6 +17,7 @@ module.exports = {
     }
   },
   themeConfig: {
+    modePicker: true,
     repo: 'wangyan/javascript-tutorial',
     repoLabel: '查看源码',
     docsRepo: 'wangyan/vuepress-javascript',

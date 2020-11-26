@@ -1,0 +1,180 @@
+html
+body
+.navbar
+.sidebar
+  background-color var(--bgColor)
+
+body
+  color var(--textColor)
+
+.navbar
+h2
+  border-bottom-color var(--borderColor)
+
+.sidebar
+  border-right-color var(--borderColor)
+
+{$contentClass}:not(.custom) p.demo
+kbd
+  border-color var(--borderColor)
+
+kbd
+  background var(--kbdBgColor)
+
+blockquote
+  color var(--blockquoteTextColor)
+  border-left-color var(--blockquoteBorderColor)
+
+a
+p a code
+  color var(--accentColor)
+
+hr
+  border-top-color var(--borderColor)
+
+tr
+  border-top-color var(--tableBorderColor)
+
+  &:nth-child(2n)
+    background-color var(--tableStripeBgColor)
+
+th
+td
+  border-color var(--tableBorderColor)
+
+.arrow.up
+  border-bottom-color var(--arrowBgColor)
+
+.arrow.down
+  border-top-color var(--arrowBgColor)
+
+.arrow.right
+border-left-color var(--arrowBgColor)
+.arrow.left
+  border-right-color var(--arrowBgColor)
+
+// code
+{$contentClass} code
+  color var(--lighten20TextColor)
+  background-color var(--miniCodeBgColor)
+
+  .token.inserted
+    color var(--accentColor)
+
+  .token.punctuation
+    color var(--preTextColor)
+
+{$contentClass} pre
+
+{$contentClass} pre[class*='language-']
+div[class*='language-']
+div[class*='language-'].line-numbers-mode::after
+  background-color var(--codeBgColor)
+
+{$contentClass}
+  pre
+  pre[class*='language-']
+    code
+      color var(--preTextColor)
+
+div[class*='language-'] .highlight-lines .highlighted
+div[class*='language-'].line-numbers-mode .highlight-lines .highlighted::before
+  background-color var(--highlightedBgColor)
+
+div[class*='language-'].line-numbers-mode::after
+  background-color var(--codeBgColor)
+  border-right-color var(--highlightedBgColor)
+
+div[class*='language-']::before
+  color var(--languageTextColor)
+
+div[class*='language-'].line-numbers-mode .line-numbers-wrapper
+  color var(--lineNumbersColor)
+
+.theme-code-block > pre
+  background-color var(--codeBgColor) !important
+
+.theme-code-group .theme-code-group__nav
+  background-color var(--codeBgColor) !important
+
+  .theme-code-group__nav-tab
+    color var(--textColor) !important
+
+  .theme-code-group__nav-tab-active
+    border-color: var(--accentColor) !important
+
+// custom-block
+.custom-block.tip
+  border-color var(--badgeTipColor)
+  background-color var(--tipBgColor)
+
+  .custom-block-title
+  a
+    color var(--tipColor)
+
+.custom-block.warning
+  border-color var(--badgeWarningColor)
+  background-color var(--warningBgColor)
+
+  .custom-block-title
+  a
+    color var(--warningColor)
+
+.custom-block.danger
+  border-color var(--badgeErrorColor)
+  background-color var(--dangerBgColor)
+
+  .custom-block-title
+  a
+    color var(--dangerColor)
+
+.custom-block.warning
+.custom-block.danger
+  color var(--textColor)
+
+.custom-block.details
+  background-color var(--tipBgColor)
+
+// badge
+.badge
+  background-color var(--badgeTipColor) !important
+
+  &.tip
+  &.green
+    background-color var(--badgeTipColor) !important
+
+  &.error
+    background-color var(--badgeErrorColor) !important
+
+  &.warning
+  &.warn
+  &.yellow
+    background-color var(--badgeWarningColor) !important
+
+// pwa
+.global-ui
+  .sw-update-popup
+    border-color var(--accentColor) !important
+    background-color var(--bgColor) !important
+    color var(--textColor) !important
+
+    button
+      border-color var(--darken10AccentColor) !important
+      background-color var(--accentColor) !important
+      color #fff !important
+
+      &:hover
+        background-color var(--lighten10AccentColor) !important
+
+// scroll bar
+@media (min-width $MQMobile)
+  ::-webkit-scrollbar
+    max-width 6px
+    max-height 12px
+
+  ::-webkit-scrollbar-thumb
+    background-color var(--languageTextColor)
+    border-radius 6px
+
+// components
+@require './components'
