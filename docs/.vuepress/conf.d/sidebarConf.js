@@ -52,5 +52,21 @@ module.exports = {
         ['/1-js/03-code-quality/06-polyfills/article', '3.6. Polyfills'],
       ]
     },
+    {
+      title: '第 4 节：Object（对象）：基础知识',
+      path: '/1-js/04-object-basics/',
+      collapsable: false,
+      sidebarDepth: 1,
+      children: [
+        ['/1-js/04-object-basics/01-object/article', '4.1. 对象'],
+        ['/1-js/04-object-basics/02-object-copy/article', '4.2. 对象引用和复制'],
+        ['/1-js/04-object-basics/03-garbage-collection/article', '4.3. 垃圾回收'],
+        ['/1-js/04-object-basics/04-object-methods/article', '4.4. 对象方法，"this"'],
+        ['/1-js/04-object-basics/05-constructor-new/article', '4.5. 构造器和操作符 "new"'],
+        ['/1-js/04-object-basics/06-optional-chaining/article', '4.6. 可选链 "?."'],
+        ['/1-js/04-object-basics/07-symbol/article', '4.7. Symbol 类型'],
+        ['/1-js/04-object-basics/08-object-toprimitive/article', '4.8. 对象 — 原始值转换'],
+      ]
+    }
   ],
 };
