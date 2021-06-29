@@ -4,7 +4,7 @@ permalink: /object
 
 # 对象
 
-正如我们在 [types](/types) 一章学到的，JavaScript 中有八种数据类型。有七种原始类型，因为它们的值只包含一种东西（字符串，数字或者其他）。
+正如我们在 [数据类型](/types) 一章学到的，JavaScript 中有八种数据类型。有七种原始类型，因为它们的值只包含一种东西（字符串、数字或者其他）。
 
 相反，对象则用来存储键值对和更复杂的实体。在 JavaScript 中，对象几乎渗透到了这门编程语言的方方面面。所以，在我们深入理解这门语言之前，必须先理解对象。
 
@@ -32,7 +32,7 @@ let user = {};  // “字面量” 的语法
 ```js
 let user = {     // 一个对象
   name: "John",  // 键 "name"，值 "John"
-  age: 30        // 键 "age"，值 30
+  age: 30      // 键 "age"，值 30
 };
 ```
 
@@ -114,7 +114,7 @@ alert(user.name); // Pete
 
 仅当我们尝试将 `user=...` 作为一个整体进行赋值时，`const` 会抛出错误。
 
-有另一种将对象属性变为常量的方式，我们将在后面的 <info:property-descriptors> 一章中学习它。
+有另一种将对象属性变为常量的方式，我们将在后面的 [属性标志和属性描述符](/property-descriptors) 一章中学习它。
 
 :::
 
@@ -315,7 +315,7 @@ alert(obj.__proto__); // [object Object] — 值为对象，与预期结果不�
 
 我们从代码中可以看出来，把它赋值为 `5` 的操作被忽略了。
 
-我们将在 [后续章节](info:prototype-inheritance) 中学习 `__proto__` 的特殊性质，并给出了 [解决此问题的方法](info:prototype-methods)。
+我们将在 [后续章节](/prototype-inheritance) 中学习 `__proto__` 的特殊性质，并给出了 [解决此问题的方法](/prototype-methods)。
 
 ## 属性存在性测试，"in" 操作符
 
