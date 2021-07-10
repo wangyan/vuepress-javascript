@@ -4,7 +4,7 @@ const headConf    = require('./conf.d/headConf.js');
 const pluginConf  = require('./conf.d/pluginConf.js');
 
 module.exports = {
-  base: '/javascript-tutorial/',
+  base: '/',
   title: '现代 JavaScript 教程',
   description: '以最新的 JavaScript 标准为基准。通过简单但足够详细的内容，为你讲解从基础到高阶的 JavaScript 相关知识。',
   head: headConf,
