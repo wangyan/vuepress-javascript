@@ -2,7 +2,7 @@
 permalink: /object-basics
 ---
 
-# Object（对象）：基础知识
+# Object 基础知识
 
 ---
 

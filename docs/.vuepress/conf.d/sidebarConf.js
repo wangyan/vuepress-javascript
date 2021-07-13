@@ -53,7 +53,7 @@ module.exports = {
       ]
     },
     {
-      title: '第 4 节：Object（对象）：基础知识',
+      title: '第 4 节：Object 基础知识',
       path: '/1-js/04-object-basics/',
       collapsable: false,
       sidebarDepth: 1,
@@ -66,6 +66,26 @@ module.exports = {
         ['/1-js/04-object-basics/06-optional-chaining/article', '4.6. 可选链 "?."'],
         ['/1-js/04-object-basics/07-symbol/article', '4.7. Symbol 类型'],
         ['/1-js/04-object-basics/08-object-toprimitive/article', '4.8. 对象 — 原始值转换'],
+      ]
+    },
+    {
+      title: '第 5 节：数据类型',
+      path: '/1-js/05-data-types/',
+      collapsable: false,
+      sidebarDepth: 1,
+      children: [
+        ['/1-js/05-data-types/01-primitives-methods/article', '5.1. 原始类型的方法'],
+        ['/1-js/05-data-types/02-number/article', '5.2. 数字类型'],
+        ['/1-js/05-data-types/03-string/article', '5.3. 字符串'],
+        ['/1-js/05-data-types/04-array/article', '5.4. 数组'],
+        ['/1-js/05-data-types/05-array-methods/article', '5.5. 数组方法'],
+        ['/1-js/05-data-types/06-iterable/article', '5.6. 可迭代对象'],
+        ['/1-js/05-data-types/07-map-set/article', '5.7. 映射和集合'],
+        ['/1-js/05-data-types/08-weakmap-weakset/article', '5.8. 弱映射和弱集合'],
+        ['/1-js/05-data-types/09-keys-values-entries/article', '5.9. Object.keys，values，entries'],
+        ['/1-js/05-data-types/10-destructuring-assignment/article', '5.10. 解构赋值'],
+        ['/1-js/05-data-types/11-date/article', '5.11. 日期和时间'],
+        ['/1-js/05-data-types/12-json/article', '5.12. JSON 方法，toJSON'],
       ]
     }
   ],

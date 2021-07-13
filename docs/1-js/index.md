@@ -13,4 +13,5 @@ permalink: /js
 * [1. 简介](01-getting-started/)  
 * [2. JavaScript 基础知识](02-first-steps/)  
 * [3. 代码质量](03-code-quality/)  
-* [4. Object（对象）：基础知识](04-object-basics/)  
+* [4. Object 基础知识](04-object-basics/)  
+* [5. 数据类型](05-data-types/)  
