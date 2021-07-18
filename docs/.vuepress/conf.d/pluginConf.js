@@ -22,5 +22,6 @@ module.exports = {
   },
   '@vuepress/active-header-links': true,
   '@vuepress/back-to-top': true,
-  '@vuepress/nprogress': true
+  '@vuepress/nprogress': true,
+  '@snowdog/vuepress-plugin-pdf-export':true
 };

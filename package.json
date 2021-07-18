@@ -5,6 +5,7 @@
   "author": "Ilya Kantor",
   "license": "CC-BY-NC-4.0",
   "devDependencies": {
+    "@snowdog/vuepress-plugin-pdf-export": "^1.1.0",
     "@vuepress/plugin-active-header-links": "^1.8.2",
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/plugin-medium-zoom": "^1.8.2",
@@ -16,6 +17,7 @@
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "docs:pdf": "vuepress export docs"
   }
 }
