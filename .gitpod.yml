@@ -1,0 +1,6 @@
+tasks:
+  - init: yarn install
+    command: echo 'Hello, World!'
+ports:
+  - port: 6060
+    onOpen: open-preview
